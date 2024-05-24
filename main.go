@@ -25,7 +25,7 @@ func main() {
 	} else {
 		fmt.Println("success read file environment")
 	}
-	psqlInfo := fmt.Sprintf("postgresql://%s:%s@%s:%s/%s", os.Getenv("PGUSER"), os.Getenv("PGPASSWD"), os.Getenv("PGHOST"), os.Getenv("PGPORT"), os.Getenv("PGDATABASE"))
+	psqlInfo := fmt.Sprintf("postgresql://%s:%s@%s:%s/%s", os.Getenv("PGUSER"), os.Getenv("PGPASSWORD"), os.Getenv("PGHOST"), os.Getenv("PGPORT"), os.Getenv("PGDATABASE"))
 
 	DB, err = sql.Open("postgres", psqlInfo)
 	err = DB.Ping()
